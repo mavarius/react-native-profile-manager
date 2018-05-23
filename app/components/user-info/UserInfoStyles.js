@@ -1,23 +1,20 @@
 import { StyleSheet } from 'react-native';
-import { 
-  appSuccessColor,
-  appFailColor,
-  appPrimaryFontColor,
-  unitHeight,
-  maxWidth,
-  appFontHeavy
+import {
+  appSecondaryFontColor,
+  appFontLight,
+  maxHeight,
+  contentWidth
 } from '../../styles/constants'
 
 export default StyleSheet.create({
-  heading: {
-    fontSize: 20,
-    textAlign: 'left',
-    margin: 10,
-    color: appPrimaryFontColor
+  userInfo: {
+    flexGrow: 1,
+    width: contentWidth,
   },
   handle: {
+    fontFamily: appFontLight,
     textAlign: 'left',
-    color: '#333333',
+    color: appSecondaryFontColor,
     marginBottom: 5,
   }
 })

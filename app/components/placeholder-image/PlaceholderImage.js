@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { Image, Animated, Easing } from 'react-native'
 
-import styles from './PlaceholderImageStyles'
-
+import { unitHeight } from '../../styles/constants'
 
 export class PlaceholderImage extends Component {
   constructor(props) {
@@ -18,21 +17,19 @@ export class PlaceholderImage extends Component {
   }
 
   triggerAnimation = () => {
-    this.state.bobValue.setValue(0.8)
+    this.state.bobValue.setValue(0.9)
     Animated.sequence([
       Animated.spring(
         this.state.bobValue, {
           toValue: 1,
-          friction: 3,
-          useNativeDriver: true
+          friction: 3
         }
       ),
       Animated.timing(
         this.state.bobValue, {
-          toValue: 0.8,
-          duration: 500,
-          delay: 10000,
-          useNativeDriver: true
+          toValue: 0.9,
+          duration: 400,
+          delay: 7000
         }
       )
     ]).start(() => {
@@ -42,7 +39,7 @@ export class PlaceholderImage extends Component {
 
   render() {
     return(
-        <Animated.Image style={{transform: [{scale: this.state.bobValue}]}} source={require('../../img/white_camera.png')} />
+        <Animated.Image style={{marginTop: unitHeight * .3, transform: [{scale: this.state.bobValue}]}} source={require('../../img/white_camera.png')} />
     )
   }
 }

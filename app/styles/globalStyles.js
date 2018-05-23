@@ -2,15 +2,18 @@ import { StyleSheet } from 'react-native'
 import {
   appPrimaryFontColor,
   appSecondaryFontColor,
-  appFontHeavy
+  appFontHeavy,
+  headerFontSize,
+  unitHeight
 } from './constants'
 
 export default StyleSheet.create({
   primaryHeader: {
     color: appPrimaryFontColor,
     fontFamily: appFontHeavy,
-    textAlign: 'center',
-    fontSize: 48,
-    fontWeight: 'bold'
+    textAlign: 'left',
+    fontSize: headerFontSize,
+    fontWeight: 'bold',
+    marginTop: unitHeight * .3
   }
 })

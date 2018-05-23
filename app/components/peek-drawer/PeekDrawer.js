@@ -45,7 +45,7 @@ export class PeekDrawer extends Component {
       ]}}>
         <View style={styles['peekSection']}>
           <ArrowButton />
-          <Svg style={{position: 'absolute'}} width={maxWidth} height={unitHeight}>
+          <Svg style={{position: 'absolute'}} width={maxWidth} height={unitHeight * .3}>
             <Polygon
               points={`
                 0,${unitHeight * .3} 
