@@ -39,7 +39,7 @@ export class ArrowButton extends Component {
 
   render() {
     return(
-      <TouchableOpacity onPress={this.handleClick} style={styles['button']}>
+      <TouchableOpacity onPress={this.props.onPress || this.handleClick} style={styles['button']}>
         <Animated.View style={{
           flex: 1,
           justifyContent: 'center',

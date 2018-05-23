@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import { View, Animated, Easing } from 'react-native'
 import Svg, { Polygon } from 'react-native-svg'
 
-import ArrowButton from '../arrow-button/ArrowButton'
-
 import styles from './PeekDrawerStyles'
 import { maxWidth, unitHeight, appBlackColor, appPrimaryColor } from '../../styles/constants'
 
@@ -44,7 +42,7 @@ export class PeekDrawer extends Component {
         })}
       ]}}>
         <View style={styles['peekSection']}>
-          <ArrowButton />
+          {this.props.children}
           <Svg style={{position: 'absolute'}} width={maxWidth} height={unitHeight * .3}>
             <Polygon
               points={`

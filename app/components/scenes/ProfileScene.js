@@ -4,6 +4,7 @@ import { View } from 'react-native'
 import ProfileImage from '../profile-image/ProfileImage'
 import UserInfo from '../user-info/UserInfo'
 import PeekDrawer from '../peek-drawer/PeekDrawer'
+import ArrowButton from '../arrow-button/ArrowButton'
 import profileImageContainer from '../../containers/profileImageContainer'
 
 import styles from './SceneStyles'
@@ -13,7 +14,7 @@ export const ProfileScene = ({ croppedImage, navigation: { navigate } }) => {
     <View style={styles['container']}>
       <ProfileImage navigate={navigate} />
       <UserInfo showNext={!!croppedImage} />
-      { croppedImage && <PeekDrawer /> }
+      { croppedImage && <PeekDrawer><ArrowButton /></PeekDrawer> }
     </View>
   )
 }
